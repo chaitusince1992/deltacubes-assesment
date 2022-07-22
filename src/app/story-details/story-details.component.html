@@ -1,17 +1,77 @@
 <div *ngIf="details.length > 0">
-    <div>Summary: {{details[0].name}}</div>
+    <div class="summary-head mb-4">Summary: {{details[0].name}}</div>
 
-    <div class="row">
+    <div class="row total-summary mb-4">
         <div class="col-6">
-            <div>Test Cases</div>
+            <p>Test Cases</p>
             <app-total-summary></app-total-summary>
         </div>
         <div class="col-6">
-            <div>Test Packs</div>
+            <p>Test Packs</p>
             <app-total-summary></app-total-summary>
+        </div>
+    </div>
+
+    <div class="warning-wrapper d-inline-block mt-4">
+        <div class="alert alert-warning" role="alert">
+            <i class="fa fa-info-circle"></i>
+            This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+    </div>
+
+    <div class="table-options row mb-3">
+        <div class="left-wrapper col-6">
+            <a class="btn table-nav active">
+                Test Cases
+            </a>
+            <a class="btn table-nav ml-3">
+                Test Packs
+            </a>
+        </div>
+        <div class="right-wrapper col-6 text-right">
+            <a class="btn p-0">
+                <div class="regular-icon add-icon">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+            <a class="btn p-0 ml-2">
+                <div class="regular-icon">
+                    <i class="fa fa-share-square-o"></i>
+                </div>
+            </a>
+            <a class="btn p-0 ml-2">
+                <div class="regular-icon">
+                    <i class="fa fa-expand"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <div class="d-table">
+            <div class="d-table-row header-row">
+                <div class="d-table-cell select-row">
+                    <input type="checkbox" name="">
+                </div>
+                <div class="d-table-cell id-cell">ID</div>
+                <div class="d-table-cell summary-cell">Summary</div>
+                <div class="d-table-cell status-cell">Status</div>
+                <div class="d-table-cell mode-cell">Mode</div>
+            </div>
+            <div class="d-table-row" *ngFor="let row of tableData">
+                <div class="d-table-cell select-row">
+                    <input type="checkbox" name="">
+                </div>
+                <div class="d-table-cell id-cell">{{row.id}}</div>
+                <div class="d-table-cell summary-cell">{{row.summary}}</div>
+                <div class="d-table-cell status-cell">{{row.status}}</div>
+                <div class="d-table-cell mode-cell">
+                    <i class="fa fa-cog"></i>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div *ngIf="details.length === 0">
-    No
+    Please select a story to see the details
 </div>

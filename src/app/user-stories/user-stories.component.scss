@@ -12,22 +12,12 @@
     vertical-align: top;
     height: 100%;
     padding: 20px;
+    overflow: auto;
 }
 
 .story-list-header {
     border-bottom: 1px solid #D0D9E9;
     padding: 20px;
-
-    .add-icon {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        background-color: #27B69C;
-        color: white;
-        line-height: 26px;
-        text-align: center;
-        font-size: 12px;
-    }
 }
 
 .story-list-filter {

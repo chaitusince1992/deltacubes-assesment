@@ -23,4 +23,33 @@ export class StoryDetailsComponent implements OnInit {
     });
   }
 
+  tableData = [
+    {
+      id: "Payment _RTGS Outward_09_TC_01",
+      summary: `Verfiy if user is aable to initiate RTGS Outward payment for below combination
+        Customer Type: Corporate Payment Type: RTGS Requested Execution Date: Back Date 
+        Instrument Type: CHQ Instrument Date: Back Date Remittance Amount:  <2 Lac 
+        Credit Excution Date: Today's Date Beneficary Customer Acct Type: SA Charge option: Our 
+        Waive Charges: No`,
+      status: "Automated",
+    },
+    {
+      id: "Payment _RTGS Outward_09_TC_01",
+      summary: `Verfiy if user is aable to initiate RTGS Outward payment for below combination
+        Customer Type: Corporate Payment Type: RTGS Requested Execution Date: Back Date 
+        Instrument Type: CHQ Instrument Date: Back Date Remittance Amount:  <2 Lac 
+        Credit Excution Date: Today's Date Beneficary Customer Acct Type: SA Charge option: Our 
+        Waive Charges: No`,
+      status: "Automated",
+    },
+    {
+      id: "Payment _RTGS Outward_09_TC_01",
+      summary: `Verfiy if user is aable to initiate RTGS Outward payment for below combination
+        Customer Type: Corporate Payment Type: RTGS Requested Execution Date: Back Date 
+        Instrument Type: CHQ Instrument Date: Back Date Remittance Amount:  <2 Lac 
+        Credit Excution Date: Today's Date Beneficary Customer Acct Type: SA Charge option: Our 
+        Waive Charges: No`,
+      status: "Automated",
+    },
+  ]
 }
