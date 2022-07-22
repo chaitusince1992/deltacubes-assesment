@@ -1,0 +1,46 @@
+
+.title {
+    font-weight: 600;
+    color: #3448FA;
+}
+
+.title-block {
+    font-size: 16px;
+    i.fa-flag {
+        color: #FF820F;
+    }
+}
+
+.summary {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+.state-chip {
+    padding: 4px 6px;
+    border-radius: 10px;
+    background-color: #eee;
+    min-width: 75px;
+    display: inline-block;
+    font-size: 11px;
+    text-align: center;
+
+    &.trace {
+        border: 1px solid #3D455B;
+        background-color: transparent;
+        margin-left: 15px;
+    }
+
+    &.review {
+        background-color: #FFD89F;
+    }
+
+    &.devdone {
+        background-color: #D3D2FC;
+    }
+
+    &.done {
+        background-color: #B2E3FF;
+    }
+}

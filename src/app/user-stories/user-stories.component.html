@@ -1,5 +1,23 @@
 <div class="user-story-list">
-    List ngFor
+    <div class="align-items-center d-flex justify-content-between story-list-header">
+        <h5 class="mb-0">User Stories List</h5>
+        <a class="btn p-0">
+            <div class="add-icon"><i class="fa fa-plus"></i></div>
+        </a>
+    </div>
+    <div class="story-list-filter">
+        <div class="form-group my-2">
+            <input type="text" class="form-control" (ngModelChange)="filterStringChange($event)" [ngModel]="filterString" placeholder="Search/Filter"/>
+            <span class="input-icon">
+                <i class="fa fa-filter"></i>
+            </span>
+        </div>
+    </div>
+    <div class="story-list-wrapper">
+        <a *ngFor="let item of userStoryListUi" class="story-item" [ngClass]="{'active': item.active}">
+            <app-user-story-item [story]="item"></app-user-story-item>
+        </a>
+    </div>
 </div>
 <div class="user-story-details">
     details of each item

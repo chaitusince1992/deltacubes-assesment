@@ -2,3 +2,24 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.form-group {
+    position: relative;
+
+    .input-icon {
+        position: absolute;
+        right: 12px;
+        top: 6px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        background-color: #E3E5ED;
+        font-size: 14px;
+    }
+}

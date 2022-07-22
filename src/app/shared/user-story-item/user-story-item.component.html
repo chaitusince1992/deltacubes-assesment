@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="title-block col-6">
+        <i class="fa fa-book mr-3"></i>
+        <span class="title">{{story.name}}</span>
+        <i class="fa fa-flag ml-3"></i>
+    </div>
+    <div class="state col-6">
+        <span class="state-chip" [ngClass]="getclassName(story)">{{story.state}}</span>
+        <span class="state-chip trace">Trace</span>
+    </div>
+    <div class="summary col-12">{{story.summary}}</div>
+</div>

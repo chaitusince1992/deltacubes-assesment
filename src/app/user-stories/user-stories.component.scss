@@ -1,5 +1,5 @@
 .user-story-list {
-    width: 30%;
+    width: 34%;
     display: inline-block;
     vertical-align: top;
     height: 100%;
@@ -7,8 +7,41 @@
 }
 
 .user-story-details {
-    width: 70%;
+    width: 66%;
     display: inline-block;
     vertical-align: top;
     height: 100%;
+}
+
+.story-list-header {
+    border-bottom: 1px solid #D0D9E9;
+    padding: 20px;
+
+    .add-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: #27B69C;
+        color: white;
+        line-height: 26px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.story-list-filter {
+    border-bottom: 1px solid #D0D9E9;
+    padding: 20px;
+}
+
+.story-item {
+    padding: 20px;
+    border-bottom: 1px solid #D0D9E9;
+    display: inline-block;
+    color: #1b1b1b;
+}
+
+.story-list-wrapper {
+    height: calc(100% - 160px);
+    overflow: auto;
 }

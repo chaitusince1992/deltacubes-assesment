@@ -6,17 +6,21 @@ import { TotalSummaryComponent } from './shared/total-summary/total-summary.comp
 import { SidebarNavComponent } from './shared/sidebar-nav/sidebar-nav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserStoriesComponent } from './user-stories/user-stories.component';
+import { UserStoryItemComponent } from './shared/user-story-item/user-story-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TotalSummaryComponent,
     SidebarNavComponent,
-    UserStoriesComponent
+    UserStoriesComponent,
+    UserStoryItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
