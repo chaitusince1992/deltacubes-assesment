@@ -1,0 +1,17 @@
+<div *ngIf="details.length > 0">
+    <div>Summary: {{details[0].name}}</div>
+
+    <div class="row">
+        <div class="col-6">
+            <div>Test Cases</div>
+            <app-total-summary></app-total-summary>
+        </div>
+        <div class="col-6">
+            <div>Test Packs</div>
+            <app-total-summary></app-total-summary>
+        </div>
+    </div>
+</div>
+<div *ngIf="details.length === 0">
+    No
+</div>

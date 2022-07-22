@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserStoriesComponent } from './user-stories/user-stories.component';
 import { UserStoryItemComponent } from './shared/user-story-item/user-story-item.component';
 import { FormsModule } from '@angular/forms';
+import { StoryDetailsComponent } from './story-details/story-details.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,15 @@ import { FormsModule } from '@angular/forms';
     TotalSummaryComponent,
     SidebarNavComponent,
     UserStoriesComponent,
-    UserStoryItemComponent
+    UserStoryItemComponent,
+    StoryDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

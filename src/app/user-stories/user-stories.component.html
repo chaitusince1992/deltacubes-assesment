@@ -7,18 +7,20 @@
     </div>
     <div class="story-list-filter">
         <div class="form-group my-2">
-            <input type="text" class="form-control" (ngModelChange)="filterStringChange($event)" [ngModel]="filterString" placeholder="Search/Filter"/>
+            <input type="text" class="form-control" (ngModelChange)="filterStringChange($event)"
+                [ngModel]="filterString" placeholder="Search/Filter" />
             <span class="input-icon">
                 <i class="fa fa-filter"></i>
             </span>
         </div>
     </div>
     <div class="story-list-wrapper">
-        <a *ngFor="let item of userStoryListUi" class="story-item" [ngClass]="{'active': item.active}">
+        <a *ngFor="let item of userStoryListUi" class="story-item" [ngClass]="{'active': item.active}"
+            [routerLink]="['details', item.id]">
             <app-user-story-item [story]="item"></app-user-story-item>
         </a>
     </div>
 </div>
 <div class="user-story-details">
-    details of each item
+    <router-outlet></router-outlet>
 </div>
