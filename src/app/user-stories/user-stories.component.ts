@@ -12,6 +12,7 @@ export class UserStoriesComponent implements OnInit {
   filterString: string = "";
   userStoryListUi: any = [];
   sub: any;
+  selectedId: any;
 
   constructor(private route: ActivatedRoute, private appService: AppService) { }
 
@@ -36,10 +37,14 @@ export class UserStoriesComponent implements OnInit {
     this.userStoryListUi = this.appService.userStoryList.filter(d => {
       return d.name.toLowerCase().indexOf(text2) > -1 || d.state.toLowerCase().indexOf(text2) > -1 || d.summary.toLowerCase().indexOf(text2) > -1;
     });
+    let selIndex = this.userStoryListUi.findIndex((d: any) => d.id === this.selectedId);
+    if (selIndex > -1) this.storyDetails(this.userStoryListUi[selIndex]);
+
   }
 
   storyDetails(item: any) {
-    console.log(item);
+    // console.log(item);
+    this.selectedId = item.id;
     this.userStoryListUi.forEach((d: any) => (d.active = false));
     item.active = true;
   }

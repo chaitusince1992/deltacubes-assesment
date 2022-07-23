@@ -1,0 +1,10 @@
+<div class="dropdown-wrapper">
+    <a class="btn" (click)="toggleDropdown()">
+        <span class=value-wrapper *ngIf="!selectedValue" style="opacity: 0.6;">Select</span>
+        <span class=value-wrapper *ngIf="selectedValue">{{selectedValue}}</span>
+        <i class="fa fa-angle-down float-right mt-2"></i>
+    </a>
+    <ul class="dropdown-list list-unstyled" *ngIf="showDropdown">
+        <li (click)="clickedOnOption(item)" *ngFor="let item of list">{{item.name}}</li>
+    </ul>
+</div>

@@ -10,6 +10,7 @@ import { UserStoryItemComponent } from './shared/user-story-item/user-story-item
 import { FormsModule } from '@angular/forms';
 import { StoryDetailsComponent } from './story-details/story-details.component';
 import { AppService } from './app.service';
+import { DropdownComponent } from './shared/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppService } from './app.service';
     SidebarNavComponent,
     UserStoriesComponent,
     UserStoryItemComponent,
-    StoryDetailsComponent
+    StoryDetailsComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

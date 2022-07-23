@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="table-options row mb-3">
+    <div class="table-options row mt-5 mb-3">
         <div class="left-wrapper col-6">
             <a class="btn table-nav active">
                 Test Cases
@@ -64,7 +64,10 @@
                 </div>
                 <div class="d-table-cell id-cell">{{row.id}}</div>
                 <div class="d-table-cell summary-cell">{{row.summary}}</div>
-                <div class="d-table-cell status-cell">{{row.status}}</div>
+                <div class="d-table-cell status-cell">
+                    <app-dropdown class="form-control" [list]="[{name: 'Automated'},{name: 'Manual' }]"
+                        [option]="row.status"></app-dropdown>
+                </div>
                 <div class="d-table-cell mode-cell">
                     <i class="fa fa-cog"></i>
                 </div>
